@@ -1,0 +1,6 @@
+framework module Pods_MELITest {
+  umbrella header "Pods-MELITest-umbrella.h"
+
+  export *
+  module * { export * }
+}
