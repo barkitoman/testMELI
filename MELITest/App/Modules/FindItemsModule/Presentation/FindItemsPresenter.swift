@@ -18,6 +18,7 @@ class FindItemsPresenter: FindItemsPresentationLogic {
     weak var viewController: FindItemsViewController?
     
     func showLoading() {
+        viewController?.viewEmptyData(show: false)
         let sections = [
             FindSection(items: []),
             FindSection(items:[FindItemLoading()])
@@ -26,8 +27,13 @@ class FindItemsPresenter: FindItemsPresentationLogic {
     }
     
     func showResults(items: [Item]) {
+        viewController?.viewEmptyData(show: false)
         if items.isEmpty {
-            
+            let sections = [
+                FindSection(items: [])
+            ]
+            viewController?.applySnapshot(sections: sections)
+            viewController?.viewEmptyData(show: true)
         }else{
             let items = items.map({ FindItemApply(viewModel: FindItemsViewModel(item: $0))})
             let section = FindSection(items: items)
@@ -37,7 +43,11 @@ class FindItemsPresenter: FindItemsPresentationLogic {
     }
     
     func showError() {
-        
+        let sections = [
+            FindSection(items: [])
+        ]
+        viewController?.applySnapshot(sections: sections)
+        viewController?.viewEmptyData(show: true)
     }
     
 }

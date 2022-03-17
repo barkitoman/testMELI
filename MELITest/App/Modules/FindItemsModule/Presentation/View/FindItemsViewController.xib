@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindItemsViewController" customModule="MELITest" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="miH-N3-WpD" id="mgc-6U-UBS"/>
+                <outlet property="emptyData" destination="t2U-gE-05A" id="4WM-Vt-TDl"/>
                 <outlet property="searchBar" destination="p2C-km-rbM" id="yuB-fy-0Zl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,6 +22,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2U-gE-05A" customClass="FindEmptyView" customModule="MELITest" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="130" width="414" height="766"/>
+                    <color key="backgroundColor" white="0.84403109388286568" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUz-TK-tKK">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                     <subviews>
@@ -63,11 +68,15 @@
                 <constraint firstItem="HUz-TK-tKK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0z5-au-OoU"/>
                 <constraint firstItem="p2C-km-rbM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="8lv-wC-j6P"/>
                 <constraint firstItem="miH-N3-WpD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BNF-Ee-tGQ"/>
+                <constraint firstItem="t2U-gE-05A" firstAttribute="leading" secondItem="miH-N3-WpD" secondAttribute="leading" id="IlL-kp-isv"/>
                 <constraint firstItem="miH-N3-WpD" firstAttribute="top" secondItem="HUz-TK-tKK" secondAttribute="bottom" id="KgU-jI-IXC"/>
                 <constraint firstItem="HUz-TK-tKK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WtY-1l-hY5"/>
+                <constraint firstItem="t2U-gE-05A" firstAttribute="bottom" secondItem="miH-N3-WpD" secondAttribute="bottom" id="Ysb-X9-9wz"/>
                 <constraint firstAttribute="bottom" secondItem="miH-N3-WpD" secondAttribute="bottom" id="bIB-OH-8Bu"/>
                 <constraint firstItem="miH-N3-WpD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hTq-ir-FHo"/>
+                <constraint firstItem="t2U-gE-05A" firstAttribute="trailing" secondItem="miH-N3-WpD" secondAttribute="trailing" id="iXk-QZ-3za"/>
                 <constraint firstItem="HUz-TK-tKK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="muf-MB-f2D"/>
+                <constraint firstItem="t2U-gE-05A" firstAttribute="top" secondItem="miH-N3-WpD" secondAttribute="top" id="xSL-Az-6w0"/>
             </constraints>
             <point key="canvasLocation" x="418.84057971014494" y="-186.16071428571428"/>
         </view>

@@ -13,7 +13,8 @@ class LoadingCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        loader.startAnimating()
+            loader.startAnimating()
+        
     }
 
 }

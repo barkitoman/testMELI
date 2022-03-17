@@ -9,12 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FindItemsViewController: BaseViewController {
+class FindItemsViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     private let interactor: FindItemsInteractor
     private let router: FindItemsRouter
     
+    @IBOutlet weak var emptyData: FindEmptyView!
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
             searchBar.searchTextField.backgroundColor = .white
@@ -48,11 +49,12 @@ class FindItemsViewController: BaseViewController {
         rxBind()
         dataSource = getDataSource()
         collectionView.dataSource = dataSource
-        collectionView.delegate = self
         configurateLayout()
+        collectionView.delegate = self
     }
     
     func rxBind(){
+        searchBar.delegate = self
         searchBar.searchTextField.rx
             .text
             .orEmpty
@@ -63,6 +65,7 @@ class FindItemsViewController: BaseViewController {
                 guard let self = self else { return }
                 self.interactor.find(query)
             }).disposed(by: disposeBag)
+            
     }
     
     
@@ -75,8 +78,42 @@ extension FindItemsViewController: UITextFieldDelegate {
     }
 }
 
+extension FindItemsViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewEmptyData(show:false)
+    }
+    
+    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+        viewEmptyData(show:false)
+    }
+}
+
 extension FindItemsViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard dataSource.snapshot().sectionIdentifiers.count == 1 else { return }
+        
+        let section = dataSource.snapshot().sectionIdentifiers[0]
+        guard section.items.contains(where: { $0 is FindItemApply }) else { return }
+        
+        if indexPath.row == section.items.count - 1 {
+            interactor.nextPage()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard dataSource.snapshot().sectionIdentifiers.count == 1 else { return }
+
+        let section = dataSource.snapshot().sectionIdentifiers[0]
+        guard section.items.contains(where: { $0 is FindItemApply }) else { return }
+
+        if let selectedItem = section.items[indexPath.row] as? FindItemApply {
+            view.endEditing(true)
+            let id = selectedItem.viewModel.item.id
+//            MLLogger.instance.log("search view: user selected item: \(id)", level: .info)
+            router.goToShowItemBy(id: id)
+        }
+    }
 }
 
 //MARK: DataSource
@@ -104,7 +141,7 @@ extension FindItemsViewController {
     
     func configurateLayout(){
         collectionView.collectionViewLayout =  UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, layoutEnvironment in
-
+            
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                   heightDimension: .fractionalHeight(1.0))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -114,7 +151,7 @@ extension FindItemsViewController {
             let section = NSCollectionLayoutSection(group: group)
             section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
             return section
-                
+            
         })
     }
     
@@ -126,5 +163,15 @@ extension FindItemsViewController {
         }
         self.dataSource.apply(snapshot)
     }
+    
+    func viewEmptyData(show:Bool){
+        UIView.transition(with: self.emptyData, duration: 0.3,
+                          options: .showHideTransitionViews,
+                          animations: {
+            self.emptyData.isHidden = !show
+        })
+    }
+    
+    
     
 }

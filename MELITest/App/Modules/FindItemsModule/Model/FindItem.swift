@@ -28,4 +28,6 @@ class FindItemApply: FindItem {
     }
 }
 
-class FindItemLoading: FindItem {}
+class FindItemLoading: FindItem {
+    
+}

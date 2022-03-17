@@ -29,6 +29,8 @@ class FindItemsRouter: FindItemsRoutingLogic {
     
     func goToShowItemBy(id: String) {
         //GoTO Detail
+        let detailModule = ModuleDetailItem.setupModule(navController: navController, itemId: id)
+        detailModule.showModule()
     }
     
 }
