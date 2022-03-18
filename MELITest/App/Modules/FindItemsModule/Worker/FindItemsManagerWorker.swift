@@ -8,7 +8,11 @@
 import Foundation
 import RxSwift
 
-class FindItemsManagerWorker {
+protocol FindItemsWorker {
+    func getArticles(from query: String, offset: Int, limit: Int) -> Single<FindResult>
+}
+
+class FindItemsManagerWorker: FindItemsWorker {
     
     func getArticles(from query: String, offset: Int, limit: Int) -> Single<FindResult> {
 //        MLLogger.instance.log("worker: searching query: '\(query)'", level: .debug)

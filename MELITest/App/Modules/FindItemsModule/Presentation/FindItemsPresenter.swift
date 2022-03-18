@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-protocol FindItemsPresentationLogic {
+protocol FindItemsPresenter {
     func showLoading()
     func showResults(items: [Item])
     func showError()
 }
 
-class FindItemsPresenter: FindItemsPresentationLogic {
+class FindItemsPresenterImpl: FindItemsPresenter {
     weak var viewController: FindItemsViewController?
     
     func showLoading() {

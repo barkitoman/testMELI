@@ -8,21 +8,21 @@
 import Foundation
 import RxSwift
 
-protocol FindItemsBusinessLogic{
+protocol FindItemsInteractor{
     func find(_ text:String)
     func nextPage()
 }
-class FindItemsInteractor: FindItemsBusinessLogic {
+class FindItemsInteractorImpl: FindItemsInteractor {
     
-    private let presenter: FindItemsPresentationLogic
-    private let worker: FindItemsManagerWorker
+    private let presenter: FindItemsPresenter
+    private let worker: FindItemsWorker
     
     private let disposeBag = DisposeBag()
     private var pagination: Pagination
     private var query = ""
     private var items: [Item] = []
     
-    init(presenter: FindItemsPresentationLogic, worker: FindItemsManagerWorker) {
+    init(presenter: FindItemsPresenter, worker: FindItemsWorker) {
         self.presenter = presenter
         self.worker = worker
         self.pagination = Pagination(total: 0, results: 0, offset: 0, limit: 15)

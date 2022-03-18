@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 
 class ModuleDetailItem {
-    private let router: DetailItemRouterLogic
+    private var router: DetailItemRouterImpl
     private let viewController: DetailItemViewController
     
     private init(navController: UINavigationController, itemId:String){
-        router = DetailItemRouterLogic(navigationController: navController)
+        router = DetailItemRouterImpl(navigationController: navController)
         let worker = DetailtemManagerWorker()
-        let presenter = DetailItemPresenterLogic()
-        let interactor = DetailtemInteractorLogic(presenter: presenter, worker: worker)
+        let presenter = DetailItemPresenterImpl()
+        let interactor = DetailtemInteractorImpl(presenter: presenter, worker: worker)
         self.viewController = DetailItemViewController(interactor: interactor, router: router, itemId: itemId)
         presenter.viewController = self.viewController
         router.viewController = self.viewController

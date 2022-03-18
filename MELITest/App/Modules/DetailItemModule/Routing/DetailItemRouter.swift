@@ -13,7 +13,7 @@ protocol DetailItemRouter {
     func goBack()
 }
 
-class DetailItemRouterLogic: DetailItemRouter {
+class DetailItemRouterImpl: DetailItemRouter {
     weak var viewController: UIViewController?
     private let navController: UINavigationController
     

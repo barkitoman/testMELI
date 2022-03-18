@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-protocol FindItemsRoutingLogic {
+protocol FindItemsRouter {
     func goToShow()
     func goToShowItemBy(id: String)
 }
 
-class FindItemsRouter: FindItemsRoutingLogic {
+class FindItemsRouterImpl: FindItemsRouter {
     weak var viewController: UIViewController?
     private let navController: UINavigationController
     
