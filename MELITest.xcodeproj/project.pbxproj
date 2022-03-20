@@ -28,6 +28,11 @@
 		5B51482E27E25AAA00EB95FD /* FindItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51482D27E25AAA00EB95FD /* FindItemsInteractor.swift */; };
 		5B51483227E2618400EB95FD /* FindResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51483127E2618400EB95FD /* FindResult.swift */; };
 		5B51483627E267B500EB95FD /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51483527E267B500EB95FD /* Data+extension.swift */; };
+		5B99452727E6603B00004757 /* InfoItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99452527E6603B00004757 /* InfoItemCollectionViewCell.swift */; };
+		5B99452827E6603B00004757 /* InfoItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B99452627E6603B00004757 /* InfoItemCollectionViewCell.xib */; };
+		5B99452D27E67C9B00004757 /* FooterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99452B27E67C9B00004757 /* FooterCollectionViewCell.swift */; };
+		5B99452E27E67C9B00004757 /* FooterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B99452C27E67C9B00004757 /* FooterCollectionViewCell.xib */; };
+		5B99453127E783FE00004757 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99453027E783FE00004757 /* Logger.swift */; };
 		5BBFA5E127E3A8C00007D10C /* FindItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBFA5DF27E3A8C00007D10C /* FindItemsViewController.swift */; };
 		5BBFA5E227E3A8C00007D10C /* FindItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BBFA5E027E3A8C00007D10C /* FindItemsViewController.xib */; };
 		5BBFA5E427E3AAC20007D10C /* FindSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBFA5E327E3AAC20007D10C /* FindSection.swift */; };
@@ -101,6 +106,11 @@
 		5B51482D27E25AAA00EB95FD /* FindItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsInteractor.swift; sourceTree = "<group>"; };
 		5B51483127E2618400EB95FD /* FindResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindResult.swift; sourceTree = "<group>"; };
 		5B51483527E267B500EB95FD /* Data+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
+		5B99452527E6603B00004757 /* InfoItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B99452627E6603B00004757 /* InfoItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		5B99452B27E67C9B00004757 /* FooterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B99452C27E67C9B00004757 /* FooterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCollectionViewCell.xib; sourceTree = "<group>"; };
+		5B99453027E783FE00004757 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		5BBFA5DF27E3A8C00007D10C /* FindItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsViewController.swift; sourceTree = "<group>"; };
 		5BBFA5E027E3A8C00007D10C /* FindItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindItemsViewController.xib; sourceTree = "<group>"; };
 		5BBFA5E327E3AAC20007D10C /* FindSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSection.swift; sourceTree = "<group>"; };
@@ -201,6 +211,7 @@
 		5B05CD8727DFBC0300E9047D /* MELITestTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B99453227E78A3000004757 /* App */,
 				5B05CD8827DFBC0300E9047D /* MELITestTests.swift */,
 			);
 			path = MELITestTests;
@@ -218,6 +229,7 @@
 		5B05CDA227DFBC4200E9047D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				5B99452F27E782B600004757 /* Utils */,
 				5BBFA61627E3ED930007D10C /* Resources */,
 				5B51483427E2679700EB95FD /* Extensions */,
 				5B05CDB427DFCD3100E9047D /* Network */,
@@ -263,6 +275,7 @@
 				5B05CDC427E125FD00E9047D /* Worker */,
 				5B05CDC527E1260A00E9047D /* Interactor */,
 				5B05CDC327E125EE00E9047D /* Presentation */,
+				5B05CDC627E1274000E9047D /* Scene */,
 				5B05CDC227E1259D00E9047D /* Model */,
 			);
 			path = FindItemsModule;
@@ -289,10 +302,7 @@
 		5B05CDC327E125EE00E9047D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5BBFA5E727E3B3AF0007D10C /* Cells */,
-				5B05CDC627E1274000E9047D /* View */,
 				5B51482627E25A2600EB95FD /* FindItemsPresenter.swift */,
-				5B51482B27E25A7C00EB95FD /* FindItemsViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -313,14 +323,16 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		5B05CDC627E1274000E9047D /* View */ = {
+		5B05CDC627E1274000E9047D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				5BBFA5E727E3B3AF0007D10C /* Cells */,
 				5BBFA5F827E3D79F0007D10C /* EmpyView */,
-				5BBFA5E027E3A8C00007D10C /* FindItemsViewController.xib */,
 				5BBFA5DF27E3A8C00007D10C /* FindItemsViewController.swift */,
+				5BBFA5E027E3A8C00007D10C /* FindItemsViewController.xib */,
+				5B51482B27E25A7C00EB95FD /* FindItemsViewModel.swift */,
 			);
-			path = View;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		5B51483427E2679700EB95FD /* Extensions */ = {
@@ -330,6 +342,39 @@
 				5BBFA5FD27E3DB800007D10C /* UIView+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B99452927E6616100004757 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				5B99452527E6603B00004757 /* InfoItemCollectionViewCell.swift */,
+				5B99452627E6603B00004757 /* InfoItemCollectionViewCell.xib */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		5B99452A27E67A6700004757 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				5B99452B27E67C9B00004757 /* FooterCollectionViewCell.swift */,
+				5B99452C27E67C9B00004757 /* FooterCollectionViewCell.xib */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		5B99452F27E782B600004757 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B99453027E783FE00004757 /* Logger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5B99453227E78A3000004757 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		5BBFA5E727E3B3AF0007D10C /* Cells */ = {
@@ -375,6 +420,7 @@
 				5BBFA60127E3E41B0007D10C /* Worker */,
 				5BBFA60227E3E4240007D10C /* Interactor */,
 				5BBFA60327E3E42B0007D10C /* Presentation */,
+				5BBFA60E27E3E5090007D10C /* Scene */,
 				5BBFA60427E3E4330007D10C /* Model */,
 			);
 			path = DetailItemModule;
@@ -407,11 +453,7 @@
 		5BBFA60327E3E42B0007D10C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5BBFA60D27E3E4FF0007D10C /* Cells */,
-				5BBFA60E27E3E5090007D10C /* View */,
 				5BBFA60F27E3E52C0007D10C /* DetailItemPresenter.swift */,
-				5BBFA63427E51F750007D10C /* DetailViewModel.swift */,
-				5BBFA63627E522EF0007D10C /* DetailPicturesViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -429,19 +471,24 @@
 		5BBFA60D27E3E4FF0007D10C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5B99452A27E67A6700004757 /* Footer */,
+				5B99452927E6616100004757 /* Info */,
 				5BBFA63927E5255B0007D10C /* Picture */,
 				5BBFA63827E525520007D10C /* Header */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		5BBFA60E27E3E5090007D10C /* View */ = {
+		5BBFA60E27E3E5090007D10C /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				5BBFA60D27E3E4FF0007D10C /* Cells */,
 				5BBFA61227E3E5430007D10C /* DetailItemViewController.swift */,
 				5BBFA61327E3E5430007D10C /* DetailItemViewController.xib */,
+				5BBFA63627E522EF0007D10C /* DetailPicturesViewModel.swift */,
+				5BBFA63427E51F750007D10C /* DetailViewModel.swift */,
 			);
-			path = View;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		5BBFA61627E3ED930007D10C /* Resources */ = {
@@ -622,9 +669,11 @@
 				5B05CD7E27DFBC0200E9047D /* LaunchScreen.storyboard in Resources */,
 				5BBFA5F727E3C6080007D10C /* ApplyItemCollectionViewCell.xib in Resources */,
 				5BBFA63D27E525730007D10C /* PictureCollectionViewCell.xib in Resources */,
+				5B99452827E6603B00004757 /* InfoItemCollectionViewCell.xib in Resources */,
 				5BBFA61527E3E5430007D10C /* DetailItemViewController.xib in Resources */,
 				5BBFA5E227E3A8C00007D10C /* FindItemsViewController.xib in Resources */,
 				5BBFA5F227E3B4E80007D10C /* LoadingCollectionViewCell.xib in Resources */,
+				5B99452E27E67C9B00004757 /* FooterCollectionViewCell.xib in Resources */,
 				5B05CD7B27DFBC0200E9047D /* Assets.xcassets in Resources */,
 				5BBFA63327E51E360007D10C /* HeaderDetailCollectionViewCell.xib in Resources */,
 				5BBFA5FC27E3D7E80007D10C /* FindEmptyView.xib in Resources */,
@@ -759,6 +808,7 @@
 				5BBFA60A27E3E4D20007D10C /* DetailtemManagerWorker.swift in Sources */,
 				5B51482127E2502100EB95FD /* FindItemsRouter.swift in Sources */,
 				5BBFA5F627E3C6080007D10C /* ApplyItemCollectionViewCell.swift in Sources */,
+				5B99452727E6603B00004757 /* InfoItemCollectionViewCell.swift in Sources */,
 				5BBFA60627E3E4870007D10C /* ModuleDetailItem.swift in Sources */,
 				5BBFA61427E3E5430007D10C /* DetailItemViewController.swift in Sources */,
 				5B05CD7227DFBC0000E9047D /* AppDelegate.swift in Sources */,
@@ -780,6 +830,7 @@
 				5B51483227E2618400EB95FD /* FindResult.swift in Sources */,
 				5B05CDBA27DFD04200E9047D /* NetworkMethod.swift in Sources */,
 				5BBFA63727E522EF0007D10C /* DetailPicturesViewModel.swift in Sources */,
+				5B99453127E783FE00004757 /* Logger.swift in Sources */,
 				5B05CDB827DFCD8000E9047D /* NetworkError.swift in Sources */,
 				5BBFA62627E509B10007D10C /* ItemDetail.swift in Sources */,
 				5B51482727E25A2600EB95FD /* FindItemsPresenter.swift in Sources */,
@@ -789,6 +840,7 @@
 				5BBFA5E127E3A8C00007D10C /* FindItemsViewController.swift in Sources */,
 				5B51483627E267B500EB95FD /* Data+extension.swift in Sources */,
 				5BBFA5F127E3B4E80007D10C /* LoadingCollectionViewCell.swift in Sources */,
+				5B99452D27E67C9B00004757 /* FooterCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

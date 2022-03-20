@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailItemViewController: UIViewController {
+class DetailItemViewController: UIViewController, UICollectionViewDelegate {
     
     private let interactor: DetailtemInteractor
     private let router: DetailItemRouter
@@ -31,7 +31,7 @@ class DetailItemViewController: UIViewController {
     }
     
     deinit {
-//        MLLogger.instance.log("details view is being deallocated", level: .deallocation)
+        Log.i("Details viewController is being deallocated")
     }
     
     
@@ -41,6 +41,7 @@ class DetailItemViewController: UIViewController {
         dataSource = getDataSource()
         configurateLayout()
         collectionView.dataSource = dataSource
+//        collectionView.delegate = self
         interactor.getDetailtItem(id: itemId)
     }
     
@@ -61,22 +62,44 @@ extension DetailItemViewController {
         let cellPhotoId = String(describing: PictureCollectionViewCell.self)
         collectionView.register(UINib(nibName: cellPhotoId, bundle: nil), forCellWithReuseIdentifier: cellPhotoId)
         
-        let dataSource = DataSource(collectionView: self.collectionView) { collectionView, indexPath, itemIdentifier in
+        let cellInfoId = String(describing: InfoItemCollectionViewCell.self)
+        collectionView.register(UINib(nibName: cellInfoId, bundle: nil), forCellWithReuseIdentifier: cellInfoId)
+        
+        let cellActionId = String(describing: FooterCollectionViewCell.self)
+        collectionView.register(UINib(nibName: cellActionId, bundle: nil), forCellWithReuseIdentifier: cellActionId)
+        
+        let dataSource = DataSource(collectionView: self.collectionView) {[weak self]  collectionView, indexPath, itemIdentifier in
+            guard let self = self else { return nil }
             
             if let item = itemIdentifier as? DetailHeaderItem {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellHeaderId, for: indexPath) as! HeaderDetailCollectionViewCell
-                cell.setUI(item.viewModel)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellHeaderId, for: indexPath) as? HeaderDetailCollectionViewCell
+                cell?.setUI(item.viewModel)
                 return cell
             }
             
             if let item = itemIdentifier as? DetailPhotoItem {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellPhotoId, for: indexPath) as! PictureCollectionViewCell
-                cell.setUI(viewModel: item.viewModel)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellPhotoId, for: indexPath) as? PictureCollectionViewCell
+                cell?.setUI(viewModel: item.viewModel)
+                return cell
+            }
+            
+            if let item = itemIdentifier as? DetailInfoItem {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellInfoId, for: indexPath) as? InfoItemCollectionViewCell
+                cell?.setUI(viewModel: item.viewModel)
+                return cell
+            }
+            
+            if let item = itemIdentifier as? DetailActionItem {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellActionId, for: indexPath) as? FooterCollectionViewCell
+                cell?.onToap = { [weak self] in
+                    guard let self = self else { return }
+                    self.interactor.goToLink(item.viewModel.detail.permalink)
+                }
                 return cell
             }
             
             if itemIdentifier is DetailLoading {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellLoadingId, for: indexPath) as! LoadingCollectionViewCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellLoadingId, for: indexPath) as? LoadingCollectionViewCell
                 return cell
             }
             
@@ -114,6 +137,29 @@ extension DetailItemViewController {
                 group.contentInsets = .init(top: 15, leading: 0, bottom: 0, trailing: 0)
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPagingCentered
+                return section
+            } else if sectionIndex == 2 {
+                let size = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .estimated(70)
+                )
+                let item = NSCollectionLayoutItem(layoutSize: size)
+                item.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: 1)
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = .init(top: 10, leading: 0, bottom: 0, trailing: 0)
+                return section
+            }
+            else if sectionIndex == 3 {
+                let size = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .estimated(50)
+                )
+                let item = NSCollectionLayoutItem(layoutSize: size)
+                item.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: 1)
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = .init(top: 26, leading: 0, bottom: 0, trailing: 0)
                 return section
             }
             return nil

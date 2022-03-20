@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="InfoItemCollectionViewCell" customModule="MELITest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="477" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="477" height="161"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FL8-IW-5aN">
+                        <rect key="frame" x="0.0" y="0.0" width="477" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 123.45" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp6-v8-qoh">
+                                <rect key="frame" x="0.0" y="0.0" width="477" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Gp6-v8-qoh" secondAttribute="bottom" id="8hO-Lx-Gc9"/>
+                            <constraint firstItem="Gp6-v8-qoh" firstAttribute="top" secondItem="FL8-IW-5aN" secondAttribute="top" id="WY9-gx-dbY"/>
+                            <constraint firstAttribute="height" constant="20" id="ruA-C7-buj"/>
+                            <constraint firstItem="Gp6-v8-qoh" firstAttribute="leading" secondItem="FL8-IW-5aN" secondAttribute="leading" id="uA3-vS-Cvv"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="94" translatesAutoresizingMaskIntoConstraints="NO" id="uKQ-z7-xFg">
+                        <rect key="frame" x="0.0" y="32" width="477" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-rH-g0a">
+                                <rect key="frame" x="0.0" y="0.0" width="477" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xm-H9-RVt">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="33"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="5% OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO2-yt-v5Z">
+                                        <rect key="frame" x="108" y="0.0" width="58" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3xm-H9-RVt" secondAttribute="bottom" id="DPL-Ab-ZNT"/>
+                                    <constraint firstItem="dO2-yt-v5Z" firstAttribute="leading" secondItem="3xm-H9-RVt" secondAttribute="trailing" constant="7.5" id="LHY-ba-Hil"/>
+                                    <constraint firstItem="dO2-yt-v5Z" firstAttribute="top" secondItem="Of2-rH-g0a" secondAttribute="top" id="MRX-ZR-lCc"/>
+                                    <constraint firstItem="3xm-H9-RVt" firstAttribute="leading" secondItem="Of2-rH-g0a" secondAttribute="leading" id="Vxs-ka-AFL"/>
+                                    <constraint firstAttribute="bottom" secondItem="dO2-yt-v5Z" secondAttribute="bottom" id="hS3-ev-TwW"/>
+                                    <constraint firstItem="3xm-H9-RVt" firstAttribute="top" secondItem="Of2-rH-g0a" secondAttribute="top" id="wDA-Pz-2KF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Garantía del vendedor: 6 meses" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwv-YD-ZE6">
+                        <rect key="frame" x="0.0" y="90" width="218" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mercadoPago" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-KB-Ri8">
+                        <rect key="frame" x="0.0" y="116" width="95" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="eHX-KB-Ri8" secondAttribute="height" multiplier="19:9" id="jYe-19-LXb"/>
+                            <constraint firstAttribute="height" constant="45" id="uHe-hO-IqU"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="uKQ-z7-xFg" secondAttribute="trailing" id="6aS-Lr-ssU"/>
+                <constraint firstItem="eHX-KB-Ri8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AeJ-w1-TRa"/>
+                <constraint firstItem="eHX-KB-Ri8" firstAttribute="top" secondItem="Hwv-YD-ZE6" secondAttribute="bottom" constant="8" id="Hhj-n6-InR"/>
+                <constraint firstAttribute="trailing" secondItem="FL8-IW-5aN" secondAttribute="trailing" id="PX6-NJ-QGY"/>
+                <constraint firstItem="FL8-IW-5aN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QPv-oi-5X3"/>
+                <constraint firstAttribute="trailing" secondItem="FL8-IW-5aN" secondAttribute="trailing" id="XDa-LB-Rnx"/>
+                <constraint firstAttribute="bottom" secondItem="eHX-KB-Ri8" secondAttribute="bottom" id="gs2-O5-BvK"/>
+                <constraint firstItem="Hwv-YD-ZE6" firstAttribute="top" secondItem="uKQ-z7-xFg" secondAttribute="bottom" constant="8" id="m4n-mu-5Oy"/>
+                <constraint firstItem="FL8-IW-5aN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="noH-NF-KM9"/>
+                <constraint firstItem="FL8-IW-5aN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oeB-b4-Rpb"/>
+                <constraint firstItem="uKQ-z7-xFg" firstAttribute="top" secondItem="FL8-IW-5aN" secondAttribute="bottom" constant="12" id="pag-yL-qhS"/>
+                <constraint firstItem="uKQ-z7-xFg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qaf-6c-km0"/>
+                <constraint firstItem="Hwv-YD-ZE6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qjX-m4-Y9e"/>
+            </constraints>
+            <size key="customSize" width="477" height="161"/>
+            <connections>
+                <outlet property="discount" destination="dO2-yt-v5Z" id="55X-40-COf"/>
+                <outlet property="imgMercadoPago" destination="eHX-KB-Ri8" id="CSh-tf-iVM"/>
+                <outlet property="originalPrice" destination="Gp6-v8-qoh" id="CNO-6p-Hws"/>
+                <outlet property="priceLabel" destination="3xm-H9-RVt" id="jLt-RM-HLy"/>
+                <outlet property="warrantyLabel" destination="Hwv-YD-ZE6" id="KxZ-fu-mnR"/>
+            </connections>
+            <point key="canvasLocation" x="344.20289855072468" y="150.33482142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="mercadoPago" width="512" height="250"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

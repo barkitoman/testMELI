@@ -51,14 +51,14 @@ class NetworkManager {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(nil, error)
-//                MLLogger.instance.log("network manager: unknown error: \(error.localizedDescription)", level: .debug)
+                Log.d("Network manager: unknown error: \(error.localizedDescription)")
                 return
             }
             
             if let response = response as? HTTPURLResponse, !(200..<300).contains(response.statusCode) {
-//                    MLLogger.instance.log("network manager: status code error has occured!", level: .debug)
-                    completion(nil, NetworkError.statusCode(response.statusCode ))
-                    return
+                Log.d("Network manager: status code error has occured!")
+                completion(nil, NetworkError.statusCode(response.statusCode ))
+                return
             }
             
             if let data = data {

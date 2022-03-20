@@ -30,7 +30,23 @@ class DetailPhotoItem: DetailSectionItem {
 class DetailHeaderItem: DetailSectionItem {
     let viewModel: DetailViewModel
     
-    init(viewModel: DetailViewModel){
+    init(viewModel: DetailViewModel) {
+        self.viewModel = viewModel
+    }
+}
+
+class DetailInfoItem: DetailSectionItem {
+    let viewModel: DetailViewModel
+    
+    init(viewModel: DetailViewModel) {
+        self.viewModel = viewModel
+    }
+}
+
+class DetailActionItem: DetailSectionItem {
+    let viewModel: DetailViewModel
+    
+    init(viewModel: DetailViewModel) {
         self.viewModel = viewModel
     }
 }

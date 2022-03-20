@@ -15,8 +15,7 @@ protocol FindItemsWorker {
 class FindItemsManagerWorker: FindItemsWorker {
     
     func getArticles(from query: String, offset: Int, limit: Int) -> Single<FindResult> {
-//        MLLogger.instance.log("worker: searching query: '\(query)'", level: .debug)
-        
+        Log.d("worker: searching query: '\(query)'")
         return Single.create { single in
             let disposable = Disposables.create()
             
@@ -40,8 +39,7 @@ class FindItemsManagerWorker: FindItemsWorker {
                         let result = try decoder.decode(FindResult.self, from: data)
                         single(.success((result)))
                     } catch {
-//                        MLLogger.instance.log("worker error: \(error.localizedDescription)", level: .debug)
-                        print(error.localizedDescription)
+                        Log.e("Worker error: \(error.localizedDescription)")
                         single(.failure(error))
                     }
                     return

@@ -110,7 +110,7 @@ extension FindItemsViewController: UICollectionViewDelegate {
         if let selectedItem = section.items[indexPath.row] as? FindItemApply {
             view.endEditing(true)
             let id = selectedItem.viewModel.item.id
-//            MLLogger.instance.log("search view: user selected item: \(id)", level: .info)
+            Log.i("Search view: user selected item: \(id)")
             router.goToShowItemBy(id: id)
         }
     }
@@ -124,7 +124,8 @@ extension FindItemsViewController {
         let cellApplyId = String(describing: ApplyItemCollectionViewCell.self)
         collectionView.register(UINib(nibName: cellApplyId, bundle: nil), forCellWithReuseIdentifier: cellApplyId)
         
-        let dataSource = DataSource(collectionView: self.collectionView) { collectionView, indexPath, itemIdentifier in
+        let dataSource = DataSource(collectionView: self.collectionView) {[weak self] collectionView, indexPath, itemIdentifier in
+            guard let self = self else { return nil }
             if itemIdentifier is FindItemLoading {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellLoadingId, for: indexPath) as! LoadingCollectionViewCell
                 return cell

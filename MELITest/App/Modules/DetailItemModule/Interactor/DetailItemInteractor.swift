@@ -25,7 +25,7 @@ class DetailtemInteractorImpl: DetailtemInteractor {
     }
     
     deinit {
-//        MLLogger.instance.log("details interactor is being deallocated", level: .deallocation)
+        Log.i("Details interactor is being deallocated")
     }
     
     func getDetailtItem(id: String){
@@ -36,7 +36,8 @@ class DetailtemInteractorImpl: DetailtemInteractor {
                 self.presenter.showDetails(detailItem: detailItem)
             }, onFailure: {[weak self] error in
                 guard let _ = self else { return }
-//                MLLogger.instance.log("Error Service", level: .error)
+                self?.presenter.showError()
+                Log.e("Error service => \(error.localizedDescription)")
             }).disposed(by: disposeBag)
         
     }

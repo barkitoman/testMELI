@@ -14,17 +14,19 @@ protocol FindItemsRouter {
 }
 
 class FindItemsRouterImpl: FindItemsRouter {
-    weak var viewController: UIViewController?
     private let navController: UINavigationController
+    weak var viewController: UIViewController?
     
     init(navigationController: UINavigationController) {
         self.navController = navigationController
     }
     
     func goToShow() {
-        if let viewController = viewController {
-            navController.pushViewController(viewController, animated: false)
+        guard let viewController = viewController else {
+            return
         }
+        navController.pushViewController(viewController, animated: true)
+        
     }
     
     func goToShowItemBy(id: String) {

@@ -12,7 +12,11 @@ protocol DetailItemWorker {
     func getDetailtItem(itemId: String) -> Single<DetailItem>
 }
 
-struct DetailtemManagerWorker: DetailItemWorker {
+class DetailtemManagerWorker: DetailItemWorker {
+    
+    deinit {
+        Log.i("Details network worker is being deallocated")
+    }
     
     func getDetailtItem(itemId: String) -> Single<DetailItem> {
         return Single.create { single in
@@ -37,8 +41,7 @@ struct DetailtemManagerWorker: DetailItemWorker {
                         let result = try decoder.decode([DetailItem].self, from: data)
                         single(.success((result[0])))
                     } catch {
-                        //                        MLLogger.instance.log("worker error: \(error.localizedDescription)", level: .debug)
-                        print(error.localizedDescription)
+                        Log.s("Error decode data: \(error.localizedDescription)")
                         single(.failure(error))
                     }
                     return

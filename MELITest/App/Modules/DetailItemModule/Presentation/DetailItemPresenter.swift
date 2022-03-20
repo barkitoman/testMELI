@@ -11,15 +11,16 @@ import Foundation
 protocol DetailItemPresenter {
     func showLoading()
     func showDetails(detailItem: DetailItem)
+    func showError()
 }
 
 class DetailItemPresenterImpl: DetailItemPresenter {
-   
     weak var  viewController: DetailItemViewController?
     
     deinit {
-//        MLLogger.instance.log("details presenter is being deallocated", level: .deallocation)
+        Log.i("Details presenter is being deallocated")
     }
+    
     func showLoading() {
         guard let viewController = viewController else {
             return
@@ -42,7 +43,27 @@ class DetailItemPresenterImpl: DetailItemPresenter {
         })
         
         let photoSection = DetailSection(items: photos)
-        viewController.applySnapshot(sections: [headerSection, photoSection])
+        
+        let infoSection = DetailSection(items: [DetailInfoItem(viewModel: DetailViewModel(detail: detailItem))])
+        
+        let actionSection = DetailSection(items: [DetailActionItem(viewModel: DetailViewModel(detail: detailItem))])
+        
+        viewController.applySnapshot(
+            sections: [
+                headerSection,
+                photoSection,
+                infoSection,
+                actionSection
+            ]
+        )
+    }
+    
+    func showError() {
+        guard let viewController = viewController else {
+            return
+        }
+        let emptySection = DetailSection(items: [])
+        viewController.applySnapshot(sections: [emptySection])
     }
     
 }

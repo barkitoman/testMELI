@@ -14,8 +14,9 @@ protocol DetailItemRouter {
 }
 
 class DetailItemRouterImpl: DetailItemRouter {
-    weak var viewController: UIViewController?
+    
     private let navController: UINavigationController
+    weak var viewController: UIViewController?
     
     init(navigationController: UINavigationController) {
         self.navController = navigationController
@@ -29,6 +30,6 @@ class DetailItemRouterImpl: DetailItemRouter {
     }
     
     func goBack() {
-        navController.popViewController(animated: true)
+        self.navController.popViewController(animated: true)
     }
 }
