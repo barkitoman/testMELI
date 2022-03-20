@@ -125,7 +125,7 @@ extension FindItemsViewController {
         collectionView.register(UINib(nibName: cellApplyId, bundle: nil), forCellWithReuseIdentifier: cellApplyId)
         
         let dataSource = DataSource(collectionView: self.collectionView) {[weak self] collectionView, indexPath, itemIdentifier in
-            guard let self = self else { return nil }
+            guard let _ = self else { return nil }
             if itemIdentifier is FindItemLoading {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellLoadingId, for: indexPath) as! LoadingCollectionViewCell
                 return cell
