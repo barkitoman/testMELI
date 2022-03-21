@@ -14,7 +14,7 @@ Unidirectional patterns share one property: Their components are all interconnec
 
 [Architecting iOS Apps with VIP Clean Code](https://www.raywenderlich.com/29416318-getting-started-with-the-vip-clean-architecture-pattern#toc-anchor-003).
 
-![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/Model.png)
+![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/model.png)
 
 ### View
 
