@@ -59,7 +59,7 @@ On this Section we are going to watch the app running.
 | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | ![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/loader.png) | ![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/items.png) |
 
-| Search Section With Pagination                                                     |
+| Search Section With Pagination                                                     ||
 | ---------------------------------------------------------------------------------- |
 | ![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/detail.png) |
 
