@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+//sourcery: AutoMockable
 protocol DetailItemPresenter {
     func showLoading()
     func showDetails(detailItem: DetailItem)

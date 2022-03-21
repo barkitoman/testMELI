@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//sourcery: AutoMockable
 protocol FindItemsPresenter {
     func showLoading()
     func showResults(items: [Item])

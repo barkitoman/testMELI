@@ -12,6 +12,7 @@ protocol FindItemsInteractor{
     func find(_ text:String)
     func nextPage()
 }
+
 class FindItemsInteractorImpl: FindItemsInteractor {
     
     private let presenter: FindItemsPresenter

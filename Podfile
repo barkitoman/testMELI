@@ -1,5 +1,7 @@
 def test_pods
     pod "SwiftyMocky"
+    pod 'RxBlocking'
+    pod 'RxTest'
 end
 
 target 'MELITest' do

@@ -2,39 +2,49 @@ PODS:
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
+  - RxBlocking (6.5.0):
+    - RxSwift (= 6.5.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
+  - RxTest (6.5.0):
+    - RxSwift (= 6.5.0)
   - Sourcery (1.6.0)
   - SwiftyMocky (4.1.0):
     - Sourcery (= 1.6.0)
 
 DEPENDENCIES:
   - NVActivityIndicatorView
+  - RxBlocking
   - RxCocoa
   - RxSwift
+  - RxTest
   - SwiftyMocky
 
 SPEC REPOS:
   trunk:
     - NVActivityIndicatorView
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxTest
     - Sourcery
     - SwiftyMocky
 
 SPEC CHECKSUMS:
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   Sourcery: 744f43178637c79bf23127dfe34e2103b3f28499
   SwiftyMocky: 014739247afadb65efb5bb92ede32c22b9365762
 
-PODFILE CHECKSUM: f343e9e5aa085086bd5c653c5511642ee1c39ba4
+PODFILE CHECKSUM: cb053220715f95ec1bed7fb3bf581b269eddd727
 
 COCOAPODS: 1.11.2

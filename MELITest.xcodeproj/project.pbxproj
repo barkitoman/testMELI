@@ -13,7 +13,6 @@
 		5B05CD7427DFBC0000E9047D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05CD7327DFBC0000E9047D /* SceneDelegate.swift */; };
 		5B05CD7B27DFBC0200E9047D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B05CD7A27DFBC0200E9047D /* Assets.xcassets */; };
 		5B05CD7E27DFBC0200E9047D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B05CD7C27DFBC0200E9047D /* LaunchScreen.storyboard */; };
-		5B05CD8927DFBC0300E9047D /* MELITestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05CD8827DFBC0300E9047D /* MELITestTests.swift */; };
 		5B05CD9327DFBC0300E9047D /* MELITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05CD9227DFBC0300E9047D /* MELITestUITests.swift */; };
 		5B05CD9527DFBC0300E9047D /* MELITestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05CD9427DFBC0300E9047D /* MELITestUITestsLaunchTests.swift */; };
 		5B05CDA527DFBC8900E9047D /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05CDA427DFBC8900E9047D /* ApiService.swift */; };
@@ -28,11 +27,24 @@
 		5B51482E27E25AAA00EB95FD /* FindItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51482D27E25AAA00EB95FD /* FindItemsInteractor.swift */; };
 		5B51483227E2618400EB95FD /* FindResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51483127E2618400EB95FD /* FindResult.swift */; };
 		5B51483627E267B500EB95FD /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51483527E267B500EB95FD /* Data+extension.swift */; };
+		5B6BBED227E91C2200A03559 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BBED127E91C2200A03559 /* Mock.generated.swift */; };
+		5B6BBED427E91CAC00A03559 /* DetailItemPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BBED327E91CAC00A03559 /* DetailItemPresenterTest.swift */; };
+		5B6BBED627E91EFC00A03559 /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BBED527E91EFC00A03559 /* NetworkTest.swift */; };
 		5B99452727E6603B00004757 /* InfoItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99452527E6603B00004757 /* InfoItemCollectionViewCell.swift */; };
 		5B99452827E6603B00004757 /* InfoItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B99452627E6603B00004757 /* InfoItemCollectionViewCell.xib */; };
 		5B99452D27E67C9B00004757 /* FooterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99452B27E67C9B00004757 /* FooterCollectionViewCell.swift */; };
 		5B99452E27E67C9B00004757 /* FooterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B99452C27E67C9B00004757 /* FooterCollectionViewCell.xib */; };
 		5B99453127E783FE00004757 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99453027E783FE00004757 /* Logger.swift */; };
+		5B9F7E7B27E8D47B0069A244 /* ModuleFindItemsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E7A27E8D47B0069A244 /* ModuleFindItemsTest.swift */; };
+		5B9F7E7E27E8D93E0069A244 /* FindItemsRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E7D27E8D93E0069A244 /* FindItemsRouterTest.swift */; };
+		5B9F7E8127E8DDE80069A244 /* FindItemsManagerWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E8027E8DDE80069A244 /* FindItemsManagerWorkerTest.swift */; };
+		5B9F7E8327E8E7140069A244 /* FindItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E8227E8E7140069A244 /* FindItemsInteractor.swift */; };
+		5B9F7E8727E90C700069A244 /* FindItemsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E8627E90C700069A244 /* FindItemsPresenterTest.swift */; };
+		5B9F7E8A27E9116D0069A244 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E8927E9116D0069A244 /* Mocks.swift */; };
+		5B9F7E9427E917230069A244 /* ModuleDetailItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E9327E917230069A244 /* ModuleDetailItemTest.swift */; };
+		5B9F7E9627E918D20069A244 /* DetailtemRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E9527E918D20069A244 /* DetailtemRouterTest.swift */; };
+		5B9F7E9827E9199D0069A244 /* DetailItemWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E9727E9199D0069A244 /* DetailItemWorkerTest.swift */; };
+		5B9F7E9A27E919FC0069A244 /* DetailItemInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F7E9927E919FC0069A244 /* DetailItemInteractorTest.swift */; };
 		5BBFA5E127E3A8C00007D10C /* FindItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBFA5DF27E3A8C00007D10C /* FindItemsViewController.swift */; };
 		5BBFA5E227E3A8C00007D10C /* FindItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BBFA5E027E3A8C00007D10C /* FindItemsViewController.xib */; };
 		5BBFA5E427E3AAC20007D10C /* FindSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBFA5E327E3AAC20007D10C /* FindSection.swift */; };
@@ -90,7 +102,6 @@
 		5B05CD7D27DFBC0200E9047D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B05CD7F27DFBC0200E9047D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B05CD8427DFBC0300E9047D /* MELITestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MELITestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B05CD8827DFBC0300E9047D /* MELITestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MELITestTests.swift; sourceTree = "<group>"; };
 		5B05CD8E27DFBC0300E9047D /* MELITestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MELITestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B05CD9227DFBC0300E9047D /* MELITestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MELITestUITests.swift; sourceTree = "<group>"; };
 		5B05CD9427DFBC0300E9047D /* MELITestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MELITestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -106,11 +117,24 @@
 		5B51482D27E25AAA00EB95FD /* FindItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsInteractor.swift; sourceTree = "<group>"; };
 		5B51483127E2618400EB95FD /* FindResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindResult.swift; sourceTree = "<group>"; };
 		5B51483527E267B500EB95FD /* Data+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
+		5B6BBED127E91C2200A03559 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
+		5B6BBED327E91CAC00A03559 /* DetailItemPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemPresenterTest.swift; sourceTree = "<group>"; };
+		5B6BBED527E91EFC00A03559 /* NetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
 		5B99452527E6603B00004757 /* InfoItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B99452627E6603B00004757 /* InfoItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B99452B27E67C9B00004757 /* FooterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B99452C27E67C9B00004757 /* FooterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B99453027E783FE00004757 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		5B9F7E7A27E8D47B0069A244 /* ModuleFindItemsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFindItemsTest.swift; sourceTree = "<group>"; };
+		5B9F7E7D27E8D93E0069A244 /* FindItemsRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsRouterTest.swift; sourceTree = "<group>"; };
+		5B9F7E8027E8DDE80069A244 /* FindItemsManagerWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsManagerWorkerTest.swift; sourceTree = "<group>"; };
+		5B9F7E8227E8E7140069A244 /* FindItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsInteractor.swift; sourceTree = "<group>"; };
+		5B9F7E8627E90C700069A244 /* FindItemsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsPresenterTest.swift; sourceTree = "<group>"; };
+		5B9F7E8927E9116D0069A244 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		5B9F7E9327E917230069A244 /* ModuleDetailItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailItemTest.swift; sourceTree = "<group>"; };
+		5B9F7E9527E918D20069A244 /* DetailtemRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailtemRouterTest.swift; sourceTree = "<group>"; };
+		5B9F7E9727E9199D0069A244 /* DetailItemWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemWorkerTest.swift; sourceTree = "<group>"; };
+		5B9F7E9927E919FC0069A244 /* DetailItemInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemInteractorTest.swift; sourceTree = "<group>"; };
 		5BBFA5DF27E3A8C00007D10C /* FindItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindItemsViewController.swift; sourceTree = "<group>"; };
 		5BBFA5E027E3A8C00007D10C /* FindItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindItemsViewController.xib; sourceTree = "<group>"; };
 		5BBFA5E327E3AAC20007D10C /* FindSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSection.swift; sourceTree = "<group>"; };
@@ -211,8 +235,9 @@
 		5B05CD8727DFBC0300E9047D /* MELITestTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B6BBED127E91C2200A03559 /* Mock.generated.swift */,
+				5B9F7E8827E911610069A244 /* Mocks */,
 				5B99453227E78A3000004757 /* App */,
-				5B05CD8827DFBC0300E9047D /* MELITestTests.swift */,
 			);
 			path = MELITestTests;
 			sourceTree = "<group>";
@@ -344,6 +369,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5B6BBED827E91F0800A03559 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5B6BBED527E91EFC00A03559 /* NetworkTest.swift */,
+			);
+			name = Network;
+			path = "New Group/Network";
+			sourceTree = "<group>";
+		};
 		5B99452927E6616100004757 /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,8 +407,115 @@
 		5B99453227E78A3000004757 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				5B6BBED827E91F0800A03559 /* Network */,
+				5B9F7E7627E8D4160069A244 /* Modules */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		5B9F7E7627E8D4160069A244 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E8E27E916F80069A244 /* DetailItemModule */,
+				5B9F7E7927E8D4440069A244 /* FindItemsModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5B9F7E7927E8D4440069A244 /* FindItemsModule */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E8527E90C150069A244 /* Presentation */,
+				5B9F7E8427E8E7180069A244 /* Interactor */,
+				5B9F7E7F27E8DDD20069A244 /* Worker */,
+				5B9F7E7C27E8D9220069A244 /* Routing */,
+				5B9F7E7A27E8D47B0069A244 /* ModuleFindItemsTest.swift */,
+			);
+			path = FindItemsModule;
+			sourceTree = "<group>";
+		};
+		5B9F7E7C27E8D9220069A244 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E7D27E8D93E0069A244 /* FindItemsRouterTest.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		5B9F7E7F27E8DDD20069A244 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E8027E8DDE80069A244 /* FindItemsManagerWorkerTest.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		5B9F7E8427E8E7180069A244 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E8227E8E7140069A244 /* FindItemsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5B9F7E8527E90C150069A244 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E8627E90C700069A244 /* FindItemsPresenterTest.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5B9F7E8827E911610069A244 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E8927E9116D0069A244 /* Mocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5B9F7E8E27E916F80069A244 /* DetailItemModule */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E9227E9171A0069A244 /* Presentation */,
+				5B9F7E9127E917160069A244 /* Interactor */,
+				5B9F7E9027E917140069A244 /* Worker */,
+				5B9F7E8F27E917110069A244 /* Routing */,
+				5B9F7E9327E917230069A244 /* ModuleDetailItemTest.swift */,
+			);
+			path = DetailItemModule;
+			sourceTree = "<group>";
+		};
+		5B9F7E8F27E917110069A244 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E9527E918D20069A244 /* DetailtemRouterTest.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		5B9F7E9027E917140069A244 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E9727E9199D0069A244 /* DetailItemWorkerTest.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		5B9F7E9127E917160069A244 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F7E9927E919FC0069A244 /* DetailItemInteractorTest.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5B9F7E9227E9171A0069A244 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5B6BBED327E91CAC00A03559 /* DetailItemPresenterTest.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		5BBFA5E727E3B3AF0007D10C /* Cells */ = {
@@ -587,6 +728,7 @@
 				5B05CD8027DFBC0300E9047D /* Sources */,
 				5B05CD8127DFBC0300E9047D /* Frameworks */,
 				5B05CD8227DFBC0300E9047D /* Resources */,
+				16A352C64CF2D002C8330EC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -697,6 +839,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16A352C64CF2D002C8330EC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MELITestTests/Pods-MELITestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MELITestTests/Pods-MELITestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MELITestTests/Pods-MELITestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D39CCDA6D461430E238BE27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -848,7 +1007,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B05CD8927DFBC0300E9047D /* MELITestTests.swift in Sources */,
+				5B6BBED627E91EFC00A03559 /* NetworkTest.swift in Sources */,
+				5B9F7E9627E918D20069A244 /* DetailtemRouterTest.swift in Sources */,
+				5B9F7E9827E9199D0069A244 /* DetailItemWorkerTest.swift in Sources */,
+				5B9F7E7B27E8D47B0069A244 /* ModuleFindItemsTest.swift in Sources */,
+				5B6BBED227E91C2200A03559 /* Mock.generated.swift in Sources */,
+				5B9F7E8727E90C700069A244 /* FindItemsPresenterTest.swift in Sources */,
+				5B9F7E8127E8DDE80069A244 /* FindItemsManagerWorkerTest.swift in Sources */,
+				5B9F7E8A27E9116D0069A244 /* Mocks.swift in Sources */,
+				5B9F7E9427E917230069A244 /* ModuleDetailItemTest.swift in Sources */,
+				5B9F7E8327E8E7140069A244 /* FindItemsInteractor.swift in Sources */,
+				5B9F7E9A27E919FC0069A244 /* DetailItemInteractorTest.swift in Sources */,
+				5B6BBED427E91CAC00A03559 /* DetailItemPresenterTest.swift in Sources */,
+				5B9F7E7E27E8D93E0069A244 /* FindItemsRouterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

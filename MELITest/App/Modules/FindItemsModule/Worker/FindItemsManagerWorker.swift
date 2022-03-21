@@ -8,6 +8,8 @@
 import Foundation
 import RxSwift
 
+
+//sourcery: AutoMockable
 protocol FindItemsWorker {
     func getArticles(from query: String, offset: Int, limit: Int) -> Single<FindResult>
 }

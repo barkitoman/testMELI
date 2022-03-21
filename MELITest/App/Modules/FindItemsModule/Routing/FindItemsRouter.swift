@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//sourcery: AutoMockable
 protocol FindItemsRouter {
     func goToShow()
     func goToShowItemBy(id: String)
