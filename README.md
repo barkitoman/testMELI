@@ -14,7 +14,7 @@ Unidirectional patterns share one property: Their components are all interconnec
 
 [Architecting iOS Apps with VIP Clean Code](https://www.raywenderlich.com/29416318-getting-started-with-the-vip-clean-architecture-pattern#toc-anchor-003).
 
-![alt text](https://github.com/barkitoman/testMELI/Evidence/Model.png)
+![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/Model.png)
 
 ### View
 
@@ -55,14 +55,14 @@ This project require `Xcode 13.0`, `Swift 5` and should be run on `iOS 14.0`.
 
 On this Section we are going to watch the app running.
 
-| Search Section Loader                                                   | Search Section                                                         |
-| ----------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| ![alt text](https://github.com/barkitoman/testMELI/Evidence/loader.png) | ![alt text](https://github.com/barkitoman/testMELI/Evidence/items.png) |
+| Search Section Loader                                                              | Search Section                                                                    |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| ![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/loader.png) | ![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/items.png) |
 
-| Search Section With Pagination                                          |
-| ----------------------------------------------------------------------- |
-| ![alt text](https://github.com/barkitoman/testMELI/Evidence/detail.png) |
+| Search Section With Pagination                                                     |
+| ---------------------------------------------------------------------------------- |
+| ![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/detail.png) |
 
 ## Unit test Log
 
-![alt text](https://github.com/barkitoman/testMELI/Evidence/unitTest.png)
+![alt text](https://github.com/barkitoman/testMELI/blob/main/Evidences/unitTest.png)
