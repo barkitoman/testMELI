@@ -1,0 +1,15 @@
+sourceryCommand: null
+unit.tests.mock:
+  sources:
+    include:
+        - ./MELITest
+    exclude: []
+  output:
+    ./MELITestTests/Mock.generated.swift
+  targets:
+    - MELITestTest
+  testable:
+    - MELITest
+  import:
+    - Foundation
+    - RxSwift

@@ -13,11 +13,12 @@ target 'MELITest' do
   target 'MELITestTests' do
     inherit! :search_paths
     # Pods for testing
+    test_pods
   end
 
   target 'MELITestUITests' do
     # Pods for testing
-    test_pods
+
   end
   
 end
