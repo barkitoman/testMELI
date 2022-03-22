@@ -18,7 +18,7 @@ Unidirectional patterns share one property: Their components are all interconnec
 
 ### View
 
-> The View is your app’s UI. This corresponds to a SwiftUI View. It sends requests to the interactor every time the user interacts with the UI.
+> The View is your app’s UI. This corresponds to a UIKit View. It sends requests to the interactor every time the user interacts with the UI.
 
 ### Presenter
 
